@@ -1,0 +1,165 @@
+:root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+.dark {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+
+/* Glassmorphism Utilities */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+/* View Transitions & Animations */
+#app-container {
+    transition: opacity 0.4s ease;
+}
+.view-enter { opacity: 0; }
+.view-enter-active { opacity: 1; }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Rich Text Styling (Blog Content) */
+.prose-custom {
+    max-width: 100%;
+    line-height: 1.8;
+    font-size: 1.125rem;
+}
+.prose-custom h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+.dark .prose-custom h2 { border-color: #334155; }
+.prose-custom h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.prose-custom p { margin-bottom: 1.5rem; color: #334155; }
+.dark .prose-custom p { color: #cbd5e1; }
+.prose-custom img {
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    display: block;
+    max-height: 600px;
+    object-fit: cover;
+}
+.prose-custom pre {
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+.prose-custom code {
+    background-color: #e2e8f0;
+    color: #ef4444;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+.dark .prose-custom code { background-color: #334155; color: #f87171; }
+.prose-custom pre code { background-color: transparent; color: inherit; padding: 0; }
+.prose-custom blockquote {
+    border-left: 4px solid var(--accent-color, #0ea5e9);
+    padding-left: 1rem;
+    font-style: italic;
+    color: #475569;
+    margin: 1.5rem 0;
+}
+.dark .prose-custom blockquote { color: #94a3b8; }
+.prose-custom ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.prose-custom ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+
+/* Table of Contents (TOC) */
+.toc-link {
+    display: block;
+    padding: 0.25rem 0;
+    color: #64748b;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+}
+.toc-link:hover,
+.toc-link.active {
+    color: #0ea5e9;
+    border-left-color: #0ea5e9;
+    font-weight: 500;
+}
+.dark .toc-link { color: #94a3b8; }
+.dark .toc-link:hover,
+.dark .toc-link.active { color: #38bdf8; border-left-color: #38bdf8; }
+.toc-h3 { padding-left: 2rem; font-size: 0.8rem; }
+
+/* Hero Canvas */
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Loaders */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(14, 165, 233, 0.3);
+    border-radius: 50%;
+    border-top-color: #0ea5e9;
+    animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Background Shapes */
+.bg-shape {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.5;
+}

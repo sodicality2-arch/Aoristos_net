@@ -1,0 +1,103 @@
+{
+  "siteInfo": {
+    "title": "Aoristos | 大阪星光学院 自学団体",
+    "tagline": "Undefined Knowledge Resonates.",
+    "description": "私たちは、カリキュラムに縛られない純粋な知的好奇心に基づき、高度な研究や開発を行う学生集団です。プログラミング、電子工学、数学、物理など、境界を超えた探求を続けています。"
+  },
+  "nav": {
+    "logo": {
+      "text": "Aoristos",
+      "icon": "ph-infinity",
+      "href": "#/"
+    },
+    "links": [
+      { "label": "Home", "href": "#/" },
+      { "label": "About", "href": "#/about" },
+      { "label": "Blog", "href": "#/blog" }
+    ]
+  },
+  "hero": {
+    "subtitle": "STUDENT RESEARCH GROUP",
+    "headline": "AORISTOS",
+    "description": "純粋な好奇心に基づき、学校では得られない知の探求を進める大阪星光学院の学生団体です。",
+    "primaryCta": { "label": "Discover More", "href": "#/about" },
+    "secondaryCta": { "label": "Read Notes", "href": "#/blog" }
+  },
+  "about": {
+    "intro": "Aoristos（アオリストス）は古代ギリシャ語で「限界がない」「未定義」を意味します。",
+    "visionTitle": "Our Vision",
+    "visionParagraphs": [
+      "既存の教育カリキュラムや枠組みにとらわれず、純粋な知的好奇心に従って深く探求する。私たちは、自ら問いを立て、仮説を検証し、そして何かを創り出すプロセスを重視しています。",
+      "情報工学、電子回路、高等数学など、各々が熱意を持つ分野を極めつつ、分野横断的なコラボレーションを通じて新たな知見を生み出すことを目指しています。"
+    ],
+    "image": {
+      "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      "alt": "Team Collaboration",
+      "position": "right",
+      "badge": "Est. 2022"
+    }
+  },
+  "activities": [
+    { "id": "dev", "icon": "ph ph-swatches", "title": "電気工学部系", "desc": "基礎の電子工作・オーディオ回路の設計や組み立て・電子工作理論" },
+    { "id": "hardware", "icon": "ph-cpu", "title": "物理部系", "desc": "なんか朝から集まって偉い" },
+    { "id": "math", "icon": "ph-function", "title": "科学オリンピック", "desc": "数学・化学・物理・生物・地理・地学など、幅広いオリンピックに出ています。集大成は科学の甲子園" },
+    { "id": "publish", "icon": "ph-article", "title": "知識共有", "desc": "メンバー内で情報を共有しています" }
+  ],
+  "members": [
+    {
+      "id": "yuta",
+      "name": "裕太",
+      "role": "電工",
+      "bio": "電子工作とかやっている。OPアンプとペル方程式が好き",
+      "avatar": "nothing/please link me",
+      "photoPosition": "top",
+      "profileLink": "#"
+    },
+    {
+      "id": "anon",
+      "name": "Anonymous",
+      "role": "Researcher",
+      "bio": "数学オリンピックの定理証明や、電池の電気化学など高度な理数系分野を専門とする。論理的思考の鬼。",
+      "avatar": "nothing/please link me",
+      "photoPosition": "top",
+      "profileLink": "#"
+    },
+    {
+      "id": "guest",
+      "name": "Guest Contributor",
+      "role": "Writer",
+      "bio": "定期的にAoristosの活動に寄稿する外部メンバー。テクノロジーの社会的影響について考察する。",
+      "avatar": "nothing/please link me",
+      "photoPosition": "top",
+      "profileLink": "#"
+    }
+  ],
+  "blog": {
+    "intro": "日々の探求の記録と共有",
+    "categories": [
+      { "id": "tech", "name": "Technology" },
+      { "id": "math", "name": "Mathematics" },
+      { "id": "hardware", "name": "Hardware" },
+      { "id": "diary", "name": "Diary" }
+    ]
+  },
+  "footer": {
+    "description": "未定義な知が共鳴する。学校教育に定義されない、自発的な学習と研究を行う集団。大阪星光学院を拠点に、多様な学術分野を探求しています。",
+    "explore": [
+      { "label": "Home", "href": "#/" },
+      { "label": "About Us", "href": "#/about" },
+      { "label": "Research Notes", "href": "#/blog" }
+    ],
+    "connect": [
+      { "label": "GitHub", "href": "#", "icon": "ph-github-logo" },
+      { "label": "Twitter", "href": "#", "icon": "ph-twitter-logo" }
+    ],
+    "copyright": "&copy; <span id=\"current-year\"></span> Aoristos. All rights reserved. Built with passion."
+  },
+  "search": {
+    "placeholder": "記事を検索...",
+    "empty": "検索キーワードを入力してください",
+    "minQueryLength": 2,
+    "noResults": "に一致する記事は見つかりませんでした"
+  }
+}
